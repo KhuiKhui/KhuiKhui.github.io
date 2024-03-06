@@ -16,11 +16,13 @@ import Button from "@mui/material/Button";
 import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
 
 const drawerWidth = 240;
 const navItems = ["About", "Speakers", "Events", "Contact"];
 
-export default function Header(props) {
+export default function Footer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -58,52 +60,62 @@ export default function Header(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-  //const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-        <AppBar component="nav" sx={{ display: "flex", position: "fixed" }}>
-          <Toolbar>
-            <img src={TedxIcon} width="250" />
+      <AppBar
+        sx={{
+          marginTop: "60px",
+          position: "relative",
+          width: "100%",
+          height: "166px",
+          bottom: "0px",
+        }}
+      >
+        <Toolbar
+          sx={{
+            marginTop: "20px",
+            display: "flex",
 
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            ></Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
-                </Button>
-              ))}
-            </Box>
-          </Toolbar>
-        </AppBar>
-        <Toolbar></Toolbar>
+            justifyContent: "left",
+          }}
+        >
+          <img src={TedxIcon} width="250" />
+        </Toolbar>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{
+            marginTop: "25px",
+            marginLeft: "38px",
+            display: "flex",
 
-        <nav>
-          <Drawer
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-            sx={{
-              display: { xs: "block", sm: "none" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
-          >
-            {drawer}
-          </Drawer>
-        </nav>
-      </Box>
+            justifyContent: "left",
+          }}
+        >
+          This independent TEDx event is operated under license from TED.
+        </Typography>
+      </AppBar>
+
+      <nav>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
     </ThemeProvider>
   );
 }
