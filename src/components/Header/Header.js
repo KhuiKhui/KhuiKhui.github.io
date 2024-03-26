@@ -13,12 +13,19 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
 
 const drawerWidth = 240;
 const navItems = ["About", "Speakers", "Events", "Contact"];
+const navLinks = [
+  "https://www.facebook.com/tedptnk",
+  "https://www.facebook.com/tedptnk",
+  "https://www.facebook.com/tedptnk",
+  "https://www.facebook.com/tedptnk",
+];
 
 export default function Header(props) {
   const { window } = props;
@@ -62,7 +69,6 @@ export default function Header(props) {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box sx={{ display: "flex" }}>
-        <CssBaseline />
         <AppBar component="nav" sx={{ display: "flex", position: "fixed" }}>
           <Toolbar>
             <img src={TedxIcon} width="250" />
@@ -73,9 +79,15 @@ export default function Header(props) {
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
             ></Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
+              {navItems.map((item, index) => (
+                <Button key={navItems[index]} sx={{ color: "#fff" }}>
+                  <Link
+                    href={navLinks[index]}
+                    underline="none"
+                    sx={{ color: "white" }}
+                  >
+                    {navItems[index]}
+                  </Link>
                 </Button>
               ))}
             </Box>

@@ -18,6 +18,8 @@ import AdbIcon from "@mui/icons-material/Adb";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 
 const drawerWidth = 240;
 const navItems = ["About", "Speakers", "Events", "Contact"];
@@ -62,39 +64,15 @@ export default function Footer(props) {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <AppBar
-        sx={{
-          marginTop: "60px",
-          position: "relative",
-          width: "100%",
-          height: "166px",
-          bottom: "0px",
-        }}
-      >
-        <Toolbar
-          sx={{
-            marginTop: "20px",
-            display: "flex",
+      <BottomNavigation sx={{ width: 500 }} showLabels={true}>
+        <BottomNavigationAction>
+          <img src={TedxIcon} width="250"></img>
+        </BottomNavigationAction>
 
-            justifyContent: "left",
-          }}
-        >
-          <img src={TedxIcon} width="250" />
-        </Toolbar>
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{
-            marginTop: "25px",
-            marginLeft: "38px",
-            display: "flex",
-
-            justifyContent: "left",
-          }}
-        >
-          This independent TEDx event is operated under license from TED.
-        </Typography>
-      </AppBar>
+        <BottomNavigationAction label="Favorites" value="favorites" />
+        <BottomNavigationAction label="Nearby" value="nearby" />
+        <BottomNavigationAction label="Folder" value="folder" />
+      </BottomNavigation>
 
       <nav>
         <Drawer

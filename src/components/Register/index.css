@@ -1,0 +1,31 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.countdown {
+  font-size: 40px;
+  font-family: "Helvetica Neue";
+  color: white;
+  box-shadow: 1;
+  text-shadow: 2px 2px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.time {
+  display: flex;
+  padding: 5px;
+  font-size: 25px;
+  font-family: "Helvetica Neue";
+  color: white;
+}
+
+.title {
+  padding: 5px;
+  font-size: 25px;
+  font-family: "Helvetica Neue";
+  color: white;
+  width: 100px;
+}
