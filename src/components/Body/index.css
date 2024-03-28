@@ -21,3 +21,31 @@
   font-family: "Helvetica Neue";
   color: white;
 }
+
+.banner {
+  transition: 0.15s;
+  background-color: "#F7D36D" !important;
+}
+
+.banner:hover {
+  background-color: "#AD92D5";
+  scale: 1.05;
+}
+
+.banner:active {
+  transform: rotate(2deg);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  width: 400px;
+  height: 500px;
+
+  transition: 0.3s;
+}
+
+.info:hover {
+  scale: 1.05;
+}

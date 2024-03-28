@@ -17,14 +17,24 @@ import Link from "@mui/material/Link";
 import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
+import "./index.css";
 
 const drawerWidth = 240;
-const navItems = ["About", "Speakers", "Events", "Contact"];
+const navItems = [
+  "Events",
+  "About",
+  "Speakers",
+  "Facebook",
+  "Instagram",
+  "TED",
+];
 const navLinks = [
+  "#",
+  "#",
+  "#",
   "https://www.facebook.com/tedptnk",
-  "https://www.facebook.com/tedptnk",
-  "https://www.facebook.com/tedptnk",
-  "https://www.facebook.com/tedptnk",
+  "https://www.instagram.com/tedxyouth.ptnk/",
+  "https://www.ted.com/tedx/events/53063",
 ];
 
 export default function Header(props) {
@@ -82,9 +92,11 @@ export default function Header(props) {
               {navItems.map((item, index) => (
                 <Button key={navItems[index]} sx={{ color: "#fff" }}>
                   <Link
+                    rel="noopener noreferrer"
                     href={navLinks[index]}
                     underline="none"
                     sx={{ color: "white" }}
+                    target="_blank"
                   >
                     {navItems[index]}
                   </Link>

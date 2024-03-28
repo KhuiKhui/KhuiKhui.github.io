@@ -1,0 +1,11 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.block {
+  transition: 0.3s;
+}
+
+.block:hover {
+  scale: 1.05;
+}

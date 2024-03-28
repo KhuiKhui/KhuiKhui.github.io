@@ -14,7 +14,6 @@ import { Icon, ThemeProvider, Typography, createTheme } from "@mui/material";
 import TedxIcon from "../images/tedx_logo/logo-black.png";
 import Model from "../Model/Model";
 import { useFrame, Canvas, extend, useThree } from "@react-three/fiber";
-import Countdown from "../Countdown/Countdown";
 import { Diversity1 } from "@mui/icons-material";
 const drawerWidth = 240;
 
@@ -27,7 +26,6 @@ export default function Register(props) {
       <Box
         sx={{
           p: 3,
-
           bgcolor: "#F8C26C",
         }}
       >
