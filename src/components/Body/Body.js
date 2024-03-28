@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./index.css";
+import LogoBlack from "../ConvertedImages/LogoBlack";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -21,6 +22,7 @@ import TedxIcon from "../images/tedx_logo/logo-black.png";
 import Model from "../Model/Model";
 import Register from "../Register/Register";
 import { useFrame, Canvas, extend, useThree } from "@react-three/fiber";
+import { OrthographicCamera } from "@react-three/drei";
 
 const drawerWidth = 240;
 const navItems = ["About", "Speakers", "Events", "Contact"];
@@ -71,12 +73,16 @@ export default function Body(props) {
               display: "flex",
               boxShadow: 20,
               bgcolor: "#F7D36D",
+              width: "65vw",
+              height: "25vh",
+              justifyContent: "center",
+              alignContent: "center",
             }}
           >
-            <img src={TedxIcon} width="1000" />
+            <LogoBlack></LogoBlack>
           </Typography>
         </Box>
-        <div style={{ width: "98.9vw", height: "45vh" }}>
+        {/* <div style={{ width: "98.9vw", height: "45vh" }}>
           <Canvas
             flat
             linear
@@ -87,9 +93,20 @@ export default function Body(props) {
               marginBottom: "20px",
             }}
           >
-            <Model position={[0, 0, 0]}></Model>
+            <OrthographicCamera
+              makeDefault
+              zoom={1}
+              top={200}
+              bottom={-200}
+              left={200}
+              right={-200}
+              near={1}
+              far={2000}
+              position={[0, 0, 200]}
+            />
+            <Model position={[0, 0, 10]}></Model>
           </Canvas>
-        </div>
+        </div> */}
         <Register></Register>
         <Grid
           container
