@@ -1,11 +1,13 @@
 import * as React from "react";
 import "./index.css";
 import LogoBlack from "../ConvertedImages/LogoBlack";
+import LogoWhite from "../ConvertedImages/LogoWhite";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Unstable_Grid2";
+import Avatar from "@mui/material/Avatar";
 import { styled } from "@mui/material/styles";
 
 import ImageList from "@mui/material/ImageList";
@@ -18,8 +20,6 @@ import {
   createTheme,
 } from "@mui/material";
 
-import TedxIcon from "../images/tedx_logo/logo-black.png";
-import Model from "../Model/Model";
 import Register from "../Register/Register";
 import { useFrame, Canvas, extend, useThree } from "@react-three/fiber";
 import { OrthographicCamera } from "@react-three/drei";
@@ -27,31 +27,32 @@ import { OrthographicCamera } from "@react-three/drei";
 const drawerWidth = 240;
 const navItems = ["About", "Speakers", "Events", "Contact"];
 
-const Banner = styled(Button)({
-  display: "flex",
-  boxShadow: "20",
-  bgcolor: "#F7D36D",
-  transition: "0.3s",
-  "&:hover": {
-    backgroundColor: "#F7D36D",
-    boxShadow: "20",
-  },
-  "&:active": {
-    boxShadow: "20",
-    backgroundColor: "#F7D36D",
-  },
-  "&:focus": {
-    boxShadow: "20",
-    backgroundColor: "#F7D36D",
-  },
-});
+// const Banner = styled(Button)({
+//   display: "flex",
+//   boxShadow: "20",
+//   bgcolor: "#F7D36D",
+//   transition: "0.3s",
+//   "&:hover": {
+//     backgroundColor: "#F7D36D",
+//     boxShadow: "20",
+//   },
+//   "&:active": {
+//     boxShadow: "20",
+//     backgroundColor: "#F7D36D",
+//   },
+//   "&:focus": {
+//     boxShadow: "20",
+//     backgroundColor: "#F7D36D",
+//   },
+// });
 export default function Body(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   return (
     <>
-      <Box sx={{ bgcolor: "#F8C26C" }}>
+      <Box sx={{ bgcolor: "#020104" }}>
+        <div className="header layer2"></div>
         <Box
           sx={{
             p: 3,
@@ -62,24 +63,32 @@ export default function Body(props) {
           }}
         >
           <Typography
-            className="roboto"
-            sx={{ fontSize: "50px", marginBottom: "50px", marginTop: "30px" }}
+            sx={{
+              fontSize: "50px",
+              marginBottom: "50px",
+              marginTop: "30px",
+              fontFamily: "Helvetica",
+              color: "white",
+              fontWeight: "bold",
+            }}
           >
             ideas worth spreading.
           </Typography>
+
           <Typography
             className="banner"
             sx={{
               display: "flex",
               boxShadow: 20,
-              bgcolor: "#F7D36D",
+              bgcolor: "#3A235E",
               width: "65vw",
               height: "25vh",
               justifyContent: "center",
               alignContent: "center",
+              borderRadius: "30px 0px 30px 0px",
             }}
           >
-            <LogoBlack></LogoBlack>
+            <LogoWhite />
           </Typography>
         </Box>
         {/* <div style={{ width: "98.9vw", height: "45vh" }}>
@@ -108,6 +117,8 @@ export default function Body(props) {
           </Canvas>
         </div> */}
         <Register></Register>
+
+        <div className="spacer layer1"></div>
         <Grid
           container
           disableEqualOverflow
@@ -117,16 +128,19 @@ export default function Body(props) {
             display: "flex",
             justifyContent: "center",
             alignContent: "center",
+            bgcolor: "#180933",
           }}
         >
           <Grid
             className="info"
             sx={{
-              p: "5px",
-              bgcolor: "#FFFFCB",
+              p: "10px",
+              bgcolor: "#271445",
+              color: "#E2D9F1",
+              borderRadius: "50px",
               ml: "27px",
               mt: "50px",
-              boxShadow: 10,
+              boxShadow: "10",
               border: "2px solid #36187B",
             }}
           >
@@ -170,11 +184,13 @@ export default function Body(props) {
           <Grid
             className="info"
             sx={{
-              p: "5px",
-              bgcolor: "#FFFFCB",
+              p: "10px",
+              bgcolor: "#3A235E",
+              color: "#E2D9F1",
+              borderRadius: "50px",
               ml: "20px",
               mt: "100px",
-              boxShadow: 10,
+              boxShadow: "10",
               border: "2px solid #36187B",
             }}
           >
@@ -216,11 +232,13 @@ export default function Body(props) {
           <Grid
             className="info"
             sx={{
-              p: "5px",
-              bgcolor: "#FFFFCB",
+              p: "10px",
+              bgcolor: "#271445",
+              color: "#E2D9F1",
+              borderRadius: "50px",
               ml: "20px",
               mt: "50px",
-              boxShadow: 10,
+              boxShadow: "10",
               border: "2px solid #36187B",
             }}
           >
@@ -258,6 +276,58 @@ export default function Body(props) {
               and you’re stuck in that middle gray area. So, as you can see,
               nothing is really “crystal clear”, but rather, "𝐂𝐫𝐲𝐬𝐭𝐚𝐥 𝐔𝐧𝐜𝐥𝐞𝐚𝐫".
             </Typography>
+          </Grid>
+        </Grid>
+
+        <div className="spacer layer2"></div>
+        <Typography
+          variant="h2"
+          sx={{
+            padding: "5px",
+            fontFamily: "Helvetica",
+            fontWeight: "bold",
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+            color: "#FFFFFF",
+          }}
+        >
+          Our speakers.
+        </Typography>
+        <Grid
+          container
+          rowSpacing={5}
+          sx={{
+            p: "5px",
+            mt: "20px",
+            ml: "10px",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Grid>
+            <Avatar sx={{ width: "200px", height: "200px" }}>H</Avatar>
+          </Grid>
+          <Grid>
+            <Avatar
+              sx={{ bgcolor: "#FFFFCB", width: "200px", height: "200px" }}
+            >
+              N
+            </Avatar>
+          </Grid>
+          <Grid>
+            <Avatar
+              sx={{ bgcolor: "#FFFFCB", width: "200px", height: "200px" }}
+            >
+              OP
+            </Avatar>
+          </Grid>
+          <Grid>
+            <Avatar
+              sx={{ bgcolor: "#FFFFCB", width: "200px", height: "200px" }}
+            >
+              OP
+            </Avatar>
           </Grid>
         </Grid>
       </Box>

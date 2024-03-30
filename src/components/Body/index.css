@@ -3,7 +3,7 @@
   padding: 0px;
 }
 
-.roboto {
+/* .roboto {
   margin-top: 40px;
   display: flex;
   font-size: 70px;
@@ -12,7 +12,7 @@
   box-shadow: 3;
   font-style: italic;
   text-shadow: 5px 5px #000000;
-}
+} */
 
 .normal {
   display: flex;
@@ -48,4 +48,29 @@
 
 .info:hover {
   scale: 1.05;
+}
+
+.spacer {
+  aspect-ratio: 900/220;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header {
+  aspect-ratio: 900/150;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.stack1 {
+  background-image: url("../images/bg_images/stacked-waves-haikei.svg");
+}
+.layer1 {
+  background-image: url("../images/bg_images/layered-waves-haikei.svg");
+}
+.layer2 {
+  background-image: url("../images/bg_images/layered-waves-haikei-flipped.svg");
 }

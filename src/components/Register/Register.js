@@ -26,13 +26,13 @@ export default function Register(props) {
       <Box
         sx={{
           p: 3,
-          bgcolor: "#F8C26C",
+          bgcolor: "#020104",
         }}
       >
         <Box
           sx={{
             boxShadow: 20,
-            bgcolor: "#F7D36D",
+            bgcolor: "#271445",
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "center",
@@ -40,6 +40,7 @@ export default function Register(props) {
             width: "1100px",
             margin: "auto",
             padding: "40px",
+            borderRadius: "30px 0px 30px 0px",
           }}
         >
           <Grid

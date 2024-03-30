@@ -18,6 +18,7 @@ import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
 import "./index.css";
+import Model from "../Model/Model";
 
 const drawerWidth = 240;
 const navItems = [
@@ -31,7 +32,7 @@ const navItems = [
 const navLinks = [
   "#",
   "#",
-  "#",
+  "/speakers",
   "https://www.facebook.com/tedptnk",
   "https://www.instagram.com/tedxyouth.ptnk/",
   "https://www.ted.com/tedx/events/53063",

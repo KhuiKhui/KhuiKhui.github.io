@@ -9,8 +9,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
+import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
@@ -42,7 +41,7 @@ export default function Footer(props) {
   });
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box>
       <Typography variant="h6" sx={{ my: 2 }}>
         TEDxYouth@PTNK
       </Typography>
@@ -64,36 +63,26 @@ export default function Footer(props) {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <BottomNavigation sx={{ width: 500 }} showLabels={true}>
-        <BottomNavigationAction>
-          <img src={TedxIcon} width="250"></img>
-        </BottomNavigationAction>
-
-        <BottomNavigationAction label="Favorites" value="favorites" />
-        <BottomNavigationAction label="Nearby" value="nearby" />
-        <BottomNavigationAction label="Folder" value="folder" />
-      </BottomNavigation>
-
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
+      <Paper
+        sx={{
+          height: "120px",
+          mt: "50px",
+          boxShadow: "10",
+        }}
+      >
+        <img src={TedxIcon} width="400" />
+        <Typography sx={{ ml: "20px" }}>
+          Copyright © 2024 | This independent TEDx event is operated under
+          license from TED.
+        </Typography>
+        <Divider
+          orientation="vertical"
+          variant="middle"
+          flexItem
+          sx={{ zIndex: "1", width: "100%", bgcolor: "#F8C26C" }}
+        />
+        <Typography sx={{ ml: "20px" }}>test</Typography>
+      </Paper>
     </ThemeProvider>
   );
 }
