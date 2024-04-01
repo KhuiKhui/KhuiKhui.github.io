@@ -21,18 +21,10 @@ import "./index.css";
 import Model from "../Model/Model";
 
 const drawerWidth = 240;
-const navItems = [
-  "Events",
-  "About",
-  "Speakers",
-  "Facebook",
-  "Instagram",
-  "TED",
-];
-const navLinks = [
-  "#",
-  "#",
-  "/speakers",
+const navNavi = ["Events", "About", "Speakers"];
+const navContacts = ["Facebook", "Instagram", "TED"];
+const navLinksNavi = ["#events", "#about", "#speakers"];
+const navLinksContacts = [
   "https://www.facebook.com/tedptnk",
   "https://www.instagram.com/tedxyouth.ptnk/",
   "https://www.ted.com/tedx/events/53063",
@@ -62,7 +54,7 @@ export default function Header(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {navContacts.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
@@ -80,9 +72,26 @@ export default function Header(props) {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box sx={{ display: "flex" }}>
-        <AppBar component="nav" sx={{ display: "flex", position: "fixed" }}>
+        <AppBar
+          component="nav"
+          sx={{
+            display: "flex",
+            position: "fixed",
+          }}
+        >
           <Toolbar>
-            <img src={TedxIcon} width="250" />
+            <Link
+              rel="noopener noreferrer"
+              href="#home"
+              underline="none"
+              sx={{
+                color: "white",
+                transition: "all 0.5s",
+              }}
+              target="_self"
+            >
+              <img src={TedxIcon} width="250" />
+            </Link>
 
             <Typography
               variant="h6"
@@ -90,16 +99,64 @@ export default function Header(props) {
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
             ></Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item, index) => (
-                <Button key={navItems[index]} sx={{ color: "#fff" }}>
+              {navNavi.map((item, index) => (
+                <Button
+                  key={navNavi[index]}
+                  sx={{
+                    color: "#fff",
+                    fontWeight: "bold",
+                    fontSize: "medium",
+                    transition: "all 0.1s",
+                    "&:hover": {
+                      backgroundColor: "rgba(236, 4, 43, 0.05)",
+                    },
+                  }}
+                >
                   <Link
                     rel="noopener noreferrer"
-                    href={navLinks[index]}
+                    href={navLinksNavi[index]}
                     underline="none"
-                    sx={{ color: "white" }}
+                    sx={{
+                      color: "white",
+                      transition: "all 0.2s",
+                      "&:hover": {
+                        color: "#EC042B",
+                      },
+                    }}
+                    target="_self"
+                  >
+                    {navNavi[index]}
+                  </Link>
+                </Button>
+              ))}
+              {navContacts.map((item, index) => (
+                <Button
+                  key={navContacts[index]}
+                  sx={{
+                    color: "#fff",
+                    fontWeight: "bold",
+                    fontSize: "medium",
+                    transition: "all 0.2s",
+
+                    "&:hover": {
+                      backgroundColor: "rgba(236, 4, 43, 0.05)",
+                    },
+                  }}
+                >
+                  <Link
+                    rel="noopener noreferrer"
+                    href={navLinksContacts[index]}
+                    underline="none"
+                    sx={{
+                      color: "white",
+                      transition: "all 0.2s",
+                      "&:hover": {
+                        color: "#EC042B",
+                      },
+                    }}
                     target="_blank"
                   >
-                    {navItems[index]}
+                    {navContacts[index]}
                   </Link>
                 </Button>
               ))}

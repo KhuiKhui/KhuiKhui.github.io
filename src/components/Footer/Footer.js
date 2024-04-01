@@ -65,9 +65,10 @@ export default function Footer(props) {
     <ThemeProvider theme={darkTheme}>
       <Paper
         sx={{
-          height: "120px",
+          height: "110px",
           mt: "50px",
           boxShadow: "10",
+          margin: "0px",
         }}
       >
         <img src={TedxIcon} width="400" />
@@ -75,13 +76,6 @@ export default function Footer(props) {
           Copyright © 2024 | This independent TEDx event is operated under
           license from TED.
         </Typography>
-        <Divider
-          orientation="vertical"
-          variant="middle"
-          flexItem
-          sx={{ zIndex: "1", width: "100%", bgcolor: "#F8C26C" }}
-        />
-        <Typography sx={{ ml: "20px" }}>test</Typography>
       </Paper>
     </ThemeProvider>
   );
