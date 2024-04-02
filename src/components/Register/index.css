@@ -5,14 +5,10 @@
 
 .countdown {
   font-size: 40px;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica";
   color: white;
   box-shadow: 1;
   text-shadow: 2px 2px #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .time {
   display: flex;
@@ -21,33 +17,17 @@
   font-family: "Helvetica Neue";
   color: white;
 }
+.date {
+  display: flex;
+
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
 
 .title {
   width: 45%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 300px 100px;
-}
-.anim-fade {
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: 200px 700px;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }

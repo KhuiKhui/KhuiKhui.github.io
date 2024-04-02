@@ -11,14 +11,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<App />} />
           <Route path="speakers" element={<Sponsors />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
+    <App />
   </Provider>
 );
 

@@ -14,11 +14,13 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
+import { Link as RouterLink, MemoryRouter } from "react-router-dom";
+import { StaticRouter } from "react-router-dom/server";
 import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
-import AdbIcon from "@mui/icons-material/Adb";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
 import "./index.css";
 import Model from "../Model/Model";
+import Sponsors from "../Sponsors/Sponsors";
 
 const drawerWidth = 240;
 const navNavi = ["Events", "About", "Speakers"];
@@ -29,6 +31,15 @@ const navLinksContacts = [
   "https://www.instagram.com/tedxyouth.ptnk/",
   "https://www.ted.com/tedx/events/53063",
 ];
+
+function Router(props) {
+  const { children } = props;
+  if (typeof window === "undefined") {
+    return <StaticRouter location="/">{children}</StaticRouter>;
+  }
+
+  return <MemoryRouter>{children}</MemoryRouter>;
+}
 
 export default function Header(props) {
   const { window } = props;
@@ -87,6 +98,9 @@ export default function Header(props) {
               sx={{
                 color: "white",
                 transition: "all 0.5s",
+
+                alignItems: "center",
+                justifyContent: "center",
               }}
               target="_self"
             >
@@ -129,6 +143,38 @@ export default function Header(props) {
                   </Link>
                 </Button>
               ))}
+              {/* <Button
+                key="Sponsors"
+                sx={{
+                  color: "#fff",
+                  fontWeight: "bold",
+                  fontSize: "medium",
+                  transition: "all 0.2s",
+
+                  "&:hover": {
+                    backgroundColor: "rgba(236, 4, 43, 0.05)",
+                  },
+                }}
+              >
+                <Router>
+                  <Link
+                    rel="noopener noreferrer"
+                    to="/sponsors"
+                    underline="none"
+                    sx={{
+                      color: "white",
+                      transition: "all 0.2s",
+                      "&:hover": {
+                        color: "#EC042B",
+                      },
+                    }}
+                    target="_self"
+                    component={Sponsors}
+                  >
+                    Sponsors
+                  </Link>
+                </Router>
+              </Button> */}
               {navContacts.map((item, index) => (
                 <Button
                   key={navContacts[index]}
