@@ -12,6 +12,11 @@ function App() {
   }, []);
   return (
     <>
+      <meta
+        name="description"
+        content="TEDxYouth PTNK is established as an independently organized TED event at VNU-HCM High School for the gifted."
+      />
+
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
