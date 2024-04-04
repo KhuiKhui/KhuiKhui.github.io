@@ -1,6 +1,3 @@
-import Header from "../Header/Header";
-import Body from "../Body/Body";
-import Footer from "../Footer/Footer";
 import Grid from "@mui/material/Unstable_Grid2";
 
 import { Typography, Box } from "@mui/material";

@@ -1,25 +1,16 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Unstable_Grid2";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
-import AdbIcon from "@mui/icons-material/Adb";
+import { createTheme } from "@mui/material";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 
 const drawerWidth = 240;
 const navItems = ["Facebook", "Instagram", "TED", "Treble Clef"];
@@ -83,7 +74,7 @@ export default function Footer(props) {
       }}
     >
       <Grid sx={{ flexDirection: "column" }}>
-        <img src={TedxIcon} width="400" />
+        <img src={TedxIcon} width="375" />
         <Typography sx={{ ml: "20px", color: "white" }}>
           Copyright © 2024 | This independent TEDx event<br></br>is operated
           under license from TED.
@@ -184,7 +175,7 @@ export default function Footer(props) {
             paddingLeft: "35px",
           }}
         >
-          <b>Hotline:</b> +84 865 525 721 (Ms. Han)
+          <b>Hotline:</b> +84 963 632 942 (Ms. Gia Hân)
         </Typography>
       </Grid>
       <Grid
@@ -222,7 +213,12 @@ export default function Footer(props) {
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          style={{ paddingTop: "10px", paddingLeft: "30px", border: "0px" }}
+          style={{
+            paddingTop: "10px",
+            paddingLeft: "30px",
+            border: "0px",
+            marginBottom: "10px",
+          }}
         ></iframe>
       </Grid>
     </Grid>

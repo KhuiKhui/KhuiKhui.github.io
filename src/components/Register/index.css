@@ -5,7 +5,6 @@
 
 .countdown {
   font-size: 40px;
-  font-family: "Helvetica";
   color: white;
   box-shadow: 1;
   text-shadow: 2px 2px #000000;
@@ -14,8 +13,17 @@
   display: flex;
   padding: 5px;
   font-size: 25px;
-  font-family: "Helvetica Neue";
   color: white;
+}
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
+  font-style: normal;
 }
 .date {
   display: flex;

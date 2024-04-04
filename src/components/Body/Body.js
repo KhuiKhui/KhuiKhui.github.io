@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./index.css";
-import { useState, useEffect, useRef } from "react";
-import LogoBlack from "../ConvertedImages/LogoBlack";
+
 import LogoWhite from "../ConvertedImages/LogoWhite";
 import MinhTu from "../images/avatars/minh_tu.jpg";
 import MaiAnh from "../images/avatars/mai_anh.jpg";
@@ -10,27 +9,15 @@ import KhanhLinh from "../images/avatars/khanh_linh.jpg";
 import Notes from "../images/bg_images/notes.PNG";
 import Lights from "../images/bg_images/lights.png";
 
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Unstable_Grid2";
 import Avatar from "@mui/material/Avatar";
 import { styled } from "@mui/material/styles";
 
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import {
-  Container,
-  Icon,
-  ThemeProvider,
-  Typography,
-  createTheme,
-} from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 import Register from "../Register/Register";
-import { useFrame, Canvas, extend, useThree } from "@react-three/fiber";
-import { OrthographicCamera } from "@react-three/drei";
-import Sponsors from "../Sponsors/Sponsors";
 
 const drawerWidth = 240;
 const navItems = ["About", "Speakers", "Events", "Contact"];
@@ -82,8 +69,17 @@ export default function Body(props) {
         component="img"
         src={Notes}
         sx={{
-          backgroundColor: "rgba(2, 1, 4, 0.5)",
-          filter: "blur(3px)",
+          filter: "blur(5px)",
+          width: "100%",
+        }}
+      ></Background>
+      <Background
+        component="img"
+        src={Lights}
+        sx={{
+          filter: "blur(5px)",
+          zIndex: "1",
+          left: "-8.5%",
           width: "100%",
         }}
       ></Background>
@@ -98,28 +94,19 @@ export default function Body(props) {
             width: "100%",
           }}
         >
-          <Background
-            component="img"
-            src={Lights}
-            sx={{
-              zIndex: "1",
-              filter: "blur(3px)",
-              left: "-8.5%",
-              width: "100%",
-            }}
-          ></Background>
           <Typography
             sx={{
               fontSize: "5vw",
-              fontFamily: "Helvetica",
+              fontFamily: "Cormorant Garamond, serif",
               color: "white",
               fontWeight: "bold",
               textShadow: "0px 0px 4px #FFFFFF",
               letterSpacing: "1.5px",
               zIndex: "1",
+              mt: "120px",
             }}
           >
-            ideas worth spreading.
+            Ideas worth spreading.
           </Typography>
 
           <Container
@@ -129,22 +116,17 @@ export default function Body(props) {
               flexDirection: "column",
               boxShadow: "0px 0px 30px #36187B",
 
-              bgcolor: "#3A235E",
+              bgcolor: "#6E4DA2",
               width: "60vw",
               height: "20vh",
               justifyContent: "center",
               alignItems: "center",
               borderRadius: "30px 0px 30px 0px",
-
-              fontFamily: "Helvetica",
-              color: "#E2D9F1",
-              fontWeight: "bold",
-              fontSize: "20px",
               zIndex: "5",
               mt: {
-                xs: "20px",
-                md: "20px",
-                lg: "45px",
+                xs: "30px",
+                md: "30px",
+                lg: "60px",
               },
               mb: "10px",
             }}
@@ -168,6 +150,7 @@ export default function Body(props) {
           alignContent: "center",
           bgcolor: "#180933",
           width: "100%",
+          zIndex: "6",
         }}
       >
         <Background
@@ -176,8 +159,9 @@ export default function Body(props) {
           sx={{
             backgroundColor: "rgba(24, 9, 51, 0.1)",
             filter: "blur(3px)",
-            zIndex: "0",
+            zIndex: "1",
             width: "100%",
+            height: "100%",
           }}
         ></Background>
         <PurpleGrid className="info" sx={{ alignItems: "normal" }}>
@@ -228,6 +212,7 @@ export default function Body(props) {
             ml: "45px",
             mr: "45px",
             mt: "100px",
+            mb: "30px",
           }}
         >
           <Typography
@@ -259,7 +244,7 @@ export default function Body(props) {
             independently organized TED event at VNU-HCM High School for the
             gifted. We are one of the first high schools in{" "}
             <b className="ted-color">Ho Chi Minh City</b> to hold a{" "}
-            <b className="ted-color">TEDx</b>
+            <b className="ted-color">TEDx </b>
             event, fully in <b>English</b>. Our mission is to embrace curiosity
             and diversity in the journey of pursuing knowledge. In addition, we
             aim to spark imagination and catalyze impact, in TED's spirit{" "}
@@ -306,13 +291,17 @@ export default function Body(props) {
         </PurpleGrid>
       </Grid>
 
-      <div className="spacer layer2" id="speakers"></div>
+      <div
+        className="spacer layer2"
+        id="speakers"
+        style={{ zIndex: "0" }}
+      ></div>
 
       <Typography
         variant="h2"
         sx={{
           padding: "5px",
-          fontFamily: "Helvetica",
+          fontFamily: "Cormorant Garamond, serif",
           fontWeight: "bold",
           display: "flex",
           alignItems: "center",
@@ -364,7 +353,7 @@ export default function Body(props) {
             variant="h3"
             sx={{
               padding: "5px",
-              fontFamily: "Helvetica",
+              fontFamily: "Cormorant Garamond, serif",
               fontWeight: "bold",
               textShadow: "3px 3px #0B0315",
               color: "white",
@@ -406,7 +395,7 @@ export default function Body(props) {
             variant="h3"
             sx={{
               padding: "5px",
-              fontFamily: "Helvetica",
+              fontFamily: "Cormorant Garamond, serif",
               fontWeight: "bold",
               textShadow: "3px 3px #0B0315",
               color: "white",
@@ -449,7 +438,7 @@ export default function Body(props) {
             variant="h3"
             sx={{
               padding: "5px",
-              fontFamily: "Helvetica",
+              fontFamily: "Cormorant Garamond, serif",
               fontWeight: "bold",
               textShadow: "3px 3px #0B0315",
               color: "white",
@@ -491,7 +480,7 @@ export default function Body(props) {
             variant="h3"
             sx={{
               padding: "5px",
-              fontFamily: "Helvetica",
+              fontFamily: "Cormorant Garamond, serif",
               fontWeight: "bold",
               textShadow: "3px 3px #0B0315",
               color: "white",

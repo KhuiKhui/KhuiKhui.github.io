@@ -1,26 +1,21 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 import { StaticRouter } from "react-router-dom/server";
-import { Icon, SvgIcon, ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material";
 import TedxIcon from "../images/tedx_logo/logo-white.png";
 import "./index.css";
-import Model from "../Model/Model";
-import Sponsors from "../Sponsors/Sponsors";
 
 const drawerWidth = 240;
 const navNavi = ["Events", "About", "Speakers"];
@@ -79,17 +74,10 @@ export default function Header(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-  //const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box sx={{ display: "flex" }}>
-        <AppBar
-          component="nav"
-          sx={{
-            display: "flex",
-            position: "fixed",
-          }}
-        >
+      <Box>
+        <AppBar component="nav" position="fixed">
           <Toolbar>
             <Link
               rel="noopener noreferrer"
