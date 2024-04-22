@@ -12,6 +12,7 @@ import { Typography, Container } from "@mui/material";
 const drawerWidth = 240;
 
 export default function Register(props) {
+  // okay
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const d = new Date();
