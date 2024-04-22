@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/KhuiKhui.github.io/static/css/main.1068ae8f.css",
-    "main.js": "/KhuiKhui.github.io/static/js/main.8accc039.js",
-    "static/js/453.36dc27e2.chunk.js": "/KhuiKhui.github.io/static/js/453.36dc27e2.chunk.js",
-    "static/media/minh_tu.jpg": "/KhuiKhui.github.io/static/media/minh_tu.34703a39564fd537c69a.jpg",
-    "static/media/khanh_linh.jpg": "/KhuiKhui.github.io/static/media/khanh_linh.e49ab4a87150950ce43d.jpg",
-    "static/media/minh_hieu.jpg": "/KhuiKhui.github.io/static/media/minh_hieu.db3ab3ebb3be50013b3b.jpg",
-    "static/media/mai_anh.jpg": "/KhuiKhui.github.io/static/media/mai_anh.f4969907e6416dbe625f.jpg",
-    "static/media/notes.PNG": "/KhuiKhui.github.io/static/media/notes.2dcc384dc31f4c5e53f0.PNG",
-    "static/media/lights.png": "/KhuiKhui.github.io/static/media/lights.914d232b47d91c029ca1.png",
-    "static/media/title.png": "/KhuiKhui.github.io/static/media/title.22ef9832037b4eb23ecc.png",
-    "static/media/logo-white.png": "/KhuiKhui.github.io/static/media/logo-white.fb8a379350344b79b00d.png",
-    "static/media/stacked-waves-haikei.svg": "/KhuiKhui.github.io/static/media/stacked-waves-haikei.17b8d1153d2b2c809b6e.svg",
-    "static/media/layered-waves-haikei-flipped.svg": "/KhuiKhui.github.io/static/media/layered-waves-haikei-flipped.74bcb4772995a83df087.svg",
-    "static/media/layered-waves-haikei.svg": "/KhuiKhui.github.io/static/media/layered-waves-haikei.e967a1d6ceff4edaab37.svg",
-    "static/media/logo.svg": "/KhuiKhui.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/layered-peaks-haikei.svg": "/KhuiKhui.github.io/static/media/layered-peaks-haikei.b72757a36c718e89c86b.svg",
-    "index.html": "/KhuiKhui.github.io/index.html",
-    "main.1068ae8f.css.map": "/KhuiKhui.github.io/static/css/main.1068ae8f.css.map",
-    "main.8accc039.js.map": "/KhuiKhui.github.io/static/js/main.8accc039.js.map",
-    "453.36dc27e2.chunk.js.map": "/KhuiKhui.github.io/static/js/453.36dc27e2.chunk.js.map"
+    "main.css": "/TEDxYouthPTNK2024/static/css/main.7557ad50.css",
+    "main.js": "/TEDxYouthPTNK2024/static/js/main.28459839.js",
+    "static/js/453.36dc27e2.chunk.js": "/TEDxYouthPTNK2024/static/js/453.36dc27e2.chunk.js",
+    "static/media/minh_tu.jpg": "/TEDxYouthPTNK2024/static/media/minh_tu.34703a39564fd537c69a.jpg",
+    "static/media/khanh_linh.jpg": "/TEDxYouthPTNK2024/static/media/khanh_linh.e49ab4a87150950ce43d.jpg",
+    "static/media/minh_hieu.jpg": "/TEDxYouthPTNK2024/static/media/minh_hieu.db3ab3ebb3be50013b3b.jpg",
+    "static/media/mai_anh.jpg": "/TEDxYouthPTNK2024/static/media/mai_anh.f4969907e6416dbe625f.jpg",
+    "static/media/notes.PNG": "/TEDxYouthPTNK2024/static/media/notes.2dcc384dc31f4c5e53f0.PNG",
+    "static/media/lights.png": "/TEDxYouthPTNK2024/static/media/lights.914d232b47d91c029ca1.png",
+    "static/media/title.png": "/TEDxYouthPTNK2024/static/media/title.22ef9832037b4eb23ecc.png",
+    "static/media/logo-white.png": "/TEDxYouthPTNK2024/static/media/logo-white.fb8a379350344b79b00d.png",
+    "static/media/stacked-waves-haikei.svg": "/TEDxYouthPTNK2024/static/media/stacked-waves-haikei.17b8d1153d2b2c809b6e.svg",
+    "static/media/layered-waves-haikei-flipped.svg": "/TEDxYouthPTNK2024/static/media/layered-waves-haikei-flipped.74bcb4772995a83df087.svg",
+    "static/media/layered-waves-haikei.svg": "/TEDxYouthPTNK2024/static/media/layered-waves-haikei.e967a1d6ceff4edaab37.svg",
+    "static/media/logo.svg": "/TEDxYouthPTNK2024/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/layered-peaks-haikei.svg": "/TEDxYouthPTNK2024/static/media/layered-peaks-haikei.b72757a36c718e89c86b.svg",
+    "index.html": "/TEDxYouthPTNK2024/index.html",
+    "main.7557ad50.css.map": "/TEDxYouthPTNK2024/static/css/main.7557ad50.css.map",
+    "main.28459839.js.map": "/TEDxYouthPTNK2024/static/js/main.28459839.js.map",
+    "453.36dc27e2.chunk.js.map": "/TEDxYouthPTNK2024/static/js/453.36dc27e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1068ae8f.css",
-    "static/js/main.8accc039.js"
+    "static/css/main.7557ad50.css",
+    "static/js/main.28459839.js"
   ]
 }
