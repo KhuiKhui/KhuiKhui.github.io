@@ -18,13 +18,15 @@ import TedxIcon from "../images/tedx_logo/logo-white.png";
 import "./index.css";
 
 const drawerWidth = 240;
+//const navNavi = ["Events", "About", "Speakers", "Sponsors"];
 const navNavi = ["Events", "About", "Speakers"];
 const navContacts = ["Facebook", "Instagram", "TED"];
-const navLinksNavi = ["#events", "#about", "#speakers"];
+//const navLinksNavi = ["/#events", "/#about", "/#speakers", "/sponsors"];
+const navLinksNavi = ["/#events", "/#about", "/#speakers"];
 const navLinksContacts = [
   "https://www.facebook.com/tedptnk",
   "https://www.instagram.com/tedxyouth.ptnk/",
-  "https://www.ted.com/tedx/events/53063",
+  "https://www.ted.com/tedx/events/56472",
 ];
 
 function Router(props) {
@@ -81,7 +83,7 @@ export default function Header(props) {
           <Toolbar>
             <Link
               rel="noopener noreferrer"
-              href="#home"
+              href="/"
               underline="none"
               sx={{
                 color: "white",
@@ -89,6 +91,9 @@ export default function Header(props) {
 
                 alignItems: "center",
                 justifyContent: "center",
+                "&:hover": {
+                  backgroundColor: "rgba(236, 4, 43, 0.05)",
+                },
               }}
               target="_self"
             >
@@ -131,38 +136,6 @@ export default function Header(props) {
                   </Link>
                 </Button>
               ))}
-              {/* <Button
-                key="Sponsors"
-                sx={{
-                  color: "#fff",
-                  fontWeight: "bold",
-                  fontSize: "medium",
-                  transition: "all 0.2s",
-
-                  "&:hover": {
-                    backgroundColor: "rgba(236, 4, 43, 0.05)",
-                  },
-                }}
-              >
-                <Router>
-                  <Link
-                    rel="noopener noreferrer"
-                    to="/sponsors"
-                    underline="none"
-                    sx={{
-                      color: "white",
-                      transition: "all 0.2s",
-                      "&:hover": {
-                        color: "#EC042B",
-                      },
-                    }}
-                    target="_self"
-                    component={Sponsors}
-                  >
-                    Sponsors
-                  </Link>
-                </Router>
-              </Button> */}
               {navContacts.map((item, index) => (
                 <Button
                   key={navContacts[index]}

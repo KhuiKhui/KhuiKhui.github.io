@@ -18,7 +18,7 @@ const navLinks = [
   "https://www.facebook.com/tedptnk",
   "https://www.instagram.com/tedxyouth.ptnk/",
   "https://www.ted.com/tedx/events/53063",
-  "https://docs.google.com/forms/d/1ousj_U0UDosVUKsQrY8qyAa-0EVYkrodqg2--5_QCic/viewform?edit_requested=true",
+  "https://forms.gle/ApsDiLcA9MhbfWA98",
 ];
 
 export default function Footer(props) {

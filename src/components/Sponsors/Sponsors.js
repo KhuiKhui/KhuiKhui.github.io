@@ -1,11 +1,12 @@
 import Grid from "@mui/material/Unstable_Grid2";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 import { Typography, Box } from "@mui/material";
 
 export default function Sponsors() {
   return (
-    <>
-      <br></br>
+    <Box sx={{ bgcolor: "#020104" }}>
       <div className="spacer peak1"></div>
       <Box
         sx={{
@@ -56,7 +57,8 @@ export default function Sponsors() {
           </Grid>
         </Grid>
       </Box>
+
       <div className="spacer peak1 flip"></div>
-    </>
+    </Box>
   );
 }

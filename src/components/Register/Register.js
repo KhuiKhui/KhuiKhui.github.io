@@ -103,6 +103,8 @@ export default function Register(props) {
             borderRadius: "30px",
             boxShadow: "0px 0px 20px #36187B",
             border: "2px solid #36187B",
+            backgroundImage:
+              "linear-gradient(to bottom right, #3A235E, #21123A)",
           }}
         >
           <Grid
@@ -238,6 +240,8 @@ export default function Register(props) {
             border: "2px solid #36187B",
             borderRadius: "30px",
             boxShadow: "0px 0px 20px #36187B",
+            backgroundImage:
+              "linear-gradient(to bottom right, #321E53, #1C0E33)",
           }}
         >
           <Grid sx={{ flexDirection: "column", width: "100%" }}>
