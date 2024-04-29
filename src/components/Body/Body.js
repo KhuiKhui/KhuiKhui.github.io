@@ -10,6 +10,7 @@ import MinhHieu from "../images/avatars/minh_hieu.jpg";
 import KhanhLinh from "../images/avatars/khanh_linh.jpg";
 import GiaKhang from "../images/avatars/giakhang.jpg";
 import Brown from "../images/avatars/brown.jpg";
+import Audrey from "../images/avatars/audrey.jpg";
 import Notes from "../images/bg_images/notes.PNG";
 import Lights from "../images/bg_images/lights.png";
 
@@ -582,6 +583,48 @@ export default function Body(props) {
               }}
             >
               Ethan C. Brown
+            </Typography>
+          </PurpleGrid>
+          <PurpleGrid
+            sx={{
+              ml: "45px",
+              mr: "45px",
+              flexDirection: {
+                xs: "column",
+                md: "row",
+                lg: "row",
+              },
+              width: {
+                xs: " 300px",
+                md: "1000px",
+                lg: "600px",
+              },
+            }}
+          >
+            <Avatar
+              sx={{
+                width: "200px",
+                height: "200px",
+                boxShadow: "0px 0px 20px #0B0315",
+              }}
+              src={Audrey}
+            ></Avatar>
+            <Typography
+              variant="h3"
+              sx={{
+                padding: "5px",
+                fontFamily: "Cormorant Garamond, serif",
+                fontWeight: "bold",
+                textShadow: "3px 3px #0B0315",
+                color: "white",
+                ml: {
+                  sx: "0px",
+                  md: "30px",
+                  lg: "30px",
+                },
+              }}
+            >
+              Audrey
             </Typography>
           </PurpleGrid>
         </Grid>
