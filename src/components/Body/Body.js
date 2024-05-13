@@ -144,8 +144,8 @@ export default function Body(props) {
 
         <Register id="register"></Register>
 
-        <div className="spacer layer1" id="/#about"></div>
-
+        <div className="spacer layer1"></div>
+        <span id="/#about"></span>
         <Grid
           container
           disableEqualOverflow
@@ -297,7 +297,6 @@ export default function Body(props) {
             </Font>
           </PurpleGrid>
         </Grid>
-
         <div className="spacer layer2" style={{ zIndex: "0" }}></div>
 
         <Typography
