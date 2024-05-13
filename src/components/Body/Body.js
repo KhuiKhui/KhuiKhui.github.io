@@ -69,7 +69,7 @@ export default function Body(props) {
           justifyContent: "flex-start",
           flexDirection: "column",
         }}
-        id="home"
+        id="/#home"
       >
         <Background
           component="img"
@@ -144,7 +144,7 @@ export default function Body(props) {
 
         <Register id="register"></Register>
 
-        <div className="spacer layer1" id="about"></div>
+        <div className="spacer layer1" id="/#about"></div>
 
         <Grid
           container
@@ -298,14 +298,11 @@ export default function Body(props) {
           </PurpleGrid>
         </Grid>
 
-        <div
-          className="spacer layer2"
-          id="speakers"
-          style={{ zIndex: "0" }}
-        ></div>
+        <div className="spacer layer2" style={{ zIndex: "0" }}></div>
 
         <Typography
           variant="h2"
+          id="/#speakers"
           sx={{
             padding: "5px",
             fontFamily: "Cormorant Garamond, serif",

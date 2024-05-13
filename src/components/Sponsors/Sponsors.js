@@ -37,7 +37,7 @@ export default function Sponsors() {
     },
   }));
   return (
-    <Box sx={{ bgcolor: "#020104" }}>
+    <Box sx={{ bgcolor: "#020104" }} id="sponsors">
       <div className="spacer peak1"></div>
       <Box
         sx={{

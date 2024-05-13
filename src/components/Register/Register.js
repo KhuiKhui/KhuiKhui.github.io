@@ -86,7 +86,7 @@ export default function Register(props) {
   return (
     <>
       <Grid
-        id="events"
+        id="/#events"
         sx={{
           borderRadius: "30px",
           // bgcolor: "#70255F",

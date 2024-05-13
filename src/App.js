@@ -5,7 +5,7 @@ import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 import Sponsors from "./components/Sponsors/Sponsors";
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -25,12 +25,12 @@ function App() {
         rel="stylesheet"
       />
       <Header />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Body />}></Route>
-          <Route path="sponsors" element={<Sponsors />}></Route>
+          <Route path="/sponsors" element={<Sponsors />}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </>
   );

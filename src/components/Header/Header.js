@@ -21,7 +21,7 @@ const drawerWidth = 240;
 const navNavi = ["Events", "About", "Speakers", "Sponsors"];
 //const navNavi = ["Events", "About", "Speakers"];
 const navContacts = ["Facebook", "Instagram", "TED"];
-const navLinksNavi = ["/#events", "/#about", "/#speakers", "/sponsors"];
+const navLinksNavi = ["/#/#events", "/#/#about", "/#/#speakers", "/#/sponsors"];
 //const navLinksNavi = ["/#events", "/#about", "/#speakers"];
 const navLinksContacts = [
   "https://www.facebook.com/tedptnk",
