@@ -247,7 +247,7 @@ export default function Body(props) {
             </Typography>
             <br></br>
             <Font>
-              <b className="ted-color">TEDxYouth PTNK</b> is established as an
+              <b className="ted-color">TEDxYouth@PTNK</b> is established as an
               independently organized TED event at VNU-HCM High School for the
               gifted. We are one of the first high schools in{" "}
               <b className="ted-color">Ho Chi Minh City</b> to hold a{" "}

@@ -26,6 +26,13 @@ export default function Register(props) {
 
   const startTimer = (e) => {
     const total = Date.parse(e) - Date.parse(new Date());
+    if (total < 0) {
+      const seconds = 0;
+      const minutes = 0;
+      const hours = 0;
+      const days = 0;
+    }
+
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / 1000 / 60 / 60) % 24);

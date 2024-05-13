@@ -18,11 +18,11 @@ import TedxIcon from "../images/tedx_logo/logo-white.png";
 import "./index.css";
 
 const drawerWidth = 240;
-//const navNavi = ["Events", "About", "Speakers", "Sponsors"];
-const navNavi = ["Events", "About", "Speakers"];
+const navNavi = ["Events", "About", "Speakers", "Sponsors"];
+//const navNavi = ["Events", "About", "Speakers"];
 const navContacts = ["Facebook", "Instagram", "TED"];
-//const navLinksNavi = ["/#events", "/#about", "/#speakers", "/sponsors"];
-const navLinksNavi = ["/#events", "/#about", "/#speakers"];
+const navLinksNavi = ["/#events", "/#about", "/#speakers", "/sponsors"];
+//const navLinksNavi = ["/#events", "/#about", "/#speakers"];
 const navLinksContacts = [
   "https://www.facebook.com/tedptnk",
   "https://www.instagram.com/tedxyouth.ptnk/",
